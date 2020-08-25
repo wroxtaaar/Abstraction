@@ -24,7 +24,7 @@ public class Main {
         vendoResolvConfig.setOptions("edns0");
         VendorHardware.storeResolvConfig(vendoResolvConfig);
 
-        // Logistics team storing some configuration of their own.        MySqlConfig inventoryMySqlConfig = new MySqlConfig();
+        // Logistics team storing some configuration of their own.
         RestServerConfig logisticsRestServerConfig = new RestServerConfig();
         logisticsRestServerConfig.setMaxThreads(10);
         logisticsRestServerConfig.setPort(80);
