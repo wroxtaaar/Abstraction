@@ -29,6 +29,9 @@ public class ConfigManager {
 
     public static <T> void writeConfig(String filename, T configData) {
         File filePath = Paths.get(CONFIG_FOLDER + filename).toFile();
+        File configDir = new File(CONFIG_FOLDER);
+        boolean bool = configDir.mkdir();
+        
         ObjectMapper objectMapper = new ObjectMapper();
 
         try {

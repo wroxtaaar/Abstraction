@@ -31,6 +31,8 @@ public class ConfigManagerXML implements ConfigManager {
     public <T> void writeConfig(String filename, T configData) {
         try {
             File filePath = Paths.get(CONFIG_FOLDER + filename + ".xml").toFile();
+            File configDir = new File(CONFIG_FOLDER);
+            boolean bool = configDir.mkdir();
             JAXBContext context = JAXBContext.newInstance(configData.getClass());
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);

@@ -29,6 +29,8 @@ public class ConfigManager {
 
     public static <T> void writeConfigToJson(String filename, T configData) {
         File filePath = Paths.get(CONFIG_FOLDER + filename).toFile();
+        File configDir = new File(CONFIG_FOLDER);
+        boolean bool = configDir.mkdir();
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             objectMapper.writeValue(filePath, configData);
@@ -41,16 +43,15 @@ public class ConfigManager {
         T config = null;
         try {
             // Adapted from: https://attacomsian.com/blog/java-read-write-xml
-            // create XML file
             File filePath = Paths.get(CONFIG_FOLDER + filename).toFile();
         
             // create an instance of `JAXBContext`
             JAXBContext context = JAXBContext.newInstance(configClass);
         
-            // create an instance of `Marshaller`
+            // create an instance of `Unmarshaller`
             Unmarshaller unmarshaller = context.createUnmarshaller();
 
-            // convert user object to XML file
+            // read from XML file
             config = (T) unmarshaller.unmarshal(filePath);
         
         } catch (JAXBException ex) {
@@ -62,9 +63,10 @@ public class ConfigManager {
     public static <T> void writeConfigToXML(String filename, T configData) {
         try {
             // Adapted from: https://attacomsian.com/blog/java-read-write-xml
-            // create XML file
             File filePath = Paths.get(CONFIG_FOLDER + filename).toFile();
-        
+            File configDir = new File(CONFIG_FOLDER);
+            boolean bool = configDir.mkdir();
+
             // create an instance of `JAXBContext`
             JAXBContext context = JAXBContext.newInstance(configData.getClass());
         
