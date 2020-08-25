@@ -13,21 +13,29 @@ public class ConfigManagerJson implements ConfigManager {
 
     public <T> T readConfig(String filename, Class<T> configClass) {
         T config = null;
+
         File filePath = Paths.get(CONFIG_FOLDER + filename).toFile();
+
         ObjectMapper objectMapper = new ObjectMapper();
+
         try {
             config = objectMapper.readValue(filePath, configClass);
+
         } catch (IOException ex) {
             System.out.println("Error on reading data");
         }
+
         return config;
     }
 
     public <T> void writeConfig(String filename, T configData) {
         File filePath = Paths.get(CONFIG_FOLDER + filename).toFile();
+
         ObjectMapper objectMapper = new ObjectMapper();
+
         try {
             objectMapper.writeValue(filePath, configData);
+            
         } catch (IOException ex) {
             System.out.println("Error on writing data");
         }
