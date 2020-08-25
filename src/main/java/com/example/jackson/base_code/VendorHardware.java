@@ -18,7 +18,7 @@ public class VendorHardware {
 
     public static void storeResolvConfig(ResolvConfig resolvConfig) {
         System.out.println("Storing resolv config of all vendor management servers");
-        ConfigManager.writeConfig("vendor_server_resolv_config.json", ResolvConfig.class);
+        ConfigManager.writeConfig("vendor_server_resolv_config.json", resolvConfig);
     }
 
     public static ResolvConfig readResolvConfig() {

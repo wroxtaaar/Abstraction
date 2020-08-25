@@ -16,7 +16,7 @@ public class Main {
         vendorMySqlConfig.setMaxThreads(10);
         vendorMySqlConfig.setPort(3307);
         vendorMySqlConfig.setMaxConn(200);
-        InventoryHardware.storeMySqlConfig(vendorMySqlConfig);
+        VendorHardware.storeMySqlConfig(vendorMySqlConfig);
 
         // Vendor team storing the resolv.conf file config of their main server.
         ResolvConfig vendoResolvConfig = new ResolvConfig();
