@@ -10,23 +10,23 @@ public class VendorHardware {
 
     public void storeMySqlConfig(MySqlConfig mySqlConfig) {
         System.out.println("Storing mysql config of vendor management team");
-        configManager.writeConfig("vendor_mysql_config.json", mySqlConfig);
+        configManager.writeConfig("vendor_mysql_config", mySqlConfig);
     }
 
     public MySqlConfig readMySqlConfig() {
         System.out.println("Reading mysql config of vendor management team");
-        MySqlConfig mySqlConfig = configManager.readConfig("vendor_mysql_config.json", MySqlConfig.class);
+        MySqlConfig mySqlConfig = configManager.readConfig("vendor_mysql_config", MySqlConfig.class);
         return mySqlConfig;
     }
 
     public void storeResolvConfig(ResolvConfig resolvConfig) {
         System.out.println("Storing resolv config of all vendor management servers");
-        configManager.writeConfig("vendor_server_resolv_config.json", resolvConfig);
+        configManager.writeConfig("vendor_server_resolv_config", resolvConfig);
     }
 
     public ResolvConfig readResolvConfig() {
         System.out.println("Reading resolv config vendor management servers");
-        ResolvConfig resolvConfig = configManager.readConfig("vendor_server_resolv_config.json",
+        ResolvConfig resolvConfig = configManager.readConfig("vendor_server_resolv_config",
                 ResolvConfig.class);
         return resolvConfig;
     }

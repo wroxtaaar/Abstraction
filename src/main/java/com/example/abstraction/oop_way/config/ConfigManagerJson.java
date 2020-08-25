@@ -14,7 +14,7 @@ public class ConfigManagerJson implements ConfigManager {
     public <T> T readConfig(String filename, Class<T> configClass) {
         T config = null;
 
-        File filePath = Paths.get(CONFIG_FOLDER + filename).toFile();
+        File filePath = Paths.get(CONFIG_FOLDER + filename + ".json").toFile();
 
         ObjectMapper objectMapper = new ObjectMapper();
 
@@ -29,7 +29,7 @@ public class ConfigManagerJson implements ConfigManager {
     }
 
     public <T> void writeConfig(String filename, T configData) {
-        File filePath = Paths.get(CONFIG_FOLDER + filename).toFile();
+        File filePath = Paths.get(CONFIG_FOLDER + filename + ".json").toFile();
 
         ObjectMapper objectMapper = new ObjectMapper();
 

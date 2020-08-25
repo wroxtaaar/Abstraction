@@ -9,12 +9,12 @@ public class InventoryHardware {
     
     public void storeMySqlConfig(MySqlConfig mySqlConfig) {
         System.out.println("Storing mysql config of inventory team");
-        configManager.writeConfig("inventory_mysql_config.json", mySqlConfig);
+        configManager.writeConfig("inventory_mysql_config", mySqlConfig);
     }
 
     public MySqlConfig readMySqlConfig() {
         System.out.println("Reading mysql config of inventory team");
-        MySqlConfig mySqlConfig = configManager.readConfig("inventory_mysql_config.json", MySqlConfig.class);
+        MySqlConfig mySqlConfig = configManager.readConfig("inventory_mysql_config", MySqlConfig.class);
         return mySqlConfig;
     }
 }
