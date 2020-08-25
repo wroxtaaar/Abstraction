@@ -1,8 +1,8 @@
-package com.example.jackson.base_code;
+package com.example.abstraction.base_code;
 
-import com.example.jackson.base_code.dto.MySqlConfig;
-import com.example.jackson.base_code.dto.ResolvConfig;
-import com.example.jackson.base_code.dto.RestServerConfig;
+import com.example.abstraction.base_code.dto.MySqlConfig;
+import com.example.abstraction.base_code.dto.ResolvConfig;
+import com.example.abstraction.base_code.dto.RestServerConfig;
 
 public class Main {
     

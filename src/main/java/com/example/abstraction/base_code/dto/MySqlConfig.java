@@ -1,9 +1,9 @@
-package com.example.jackson.base_code.dto;
+package com.example.abstraction.base_code.dto;
 
-public class RestServerConfig {
+public class MySqlConfig {
     private int maxThreads;
     private int port;
-    private int maxListeners;
+    private int maxConn;
 
     public int getMaxThreads() {
         return maxThreads;
@@ -21,16 +21,17 @@ public class RestServerConfig {
         this.port = port;
     }
 
-    public int getMaxListeners() {
-        return maxListeners;
+    public int getMaxConn() {
+        return maxConn;
     }
 
-    public void setMaxListeners(int maxListeners) {
-        this.maxListeners = maxListeners;
+    public void setMaxConn(int maxConn) {
+        this.maxConn = maxConn;
     }
 
     @Override
     public String toString() {
-        return "RestServer [maxListeners=" + maxListeners + ", maxThreads=" + maxThreads + ", port=" + port + "]";
+        return "MySqlConfig [maxConn=" + maxConn + ", maxThreads=" + maxThreads + ", port=" + port + "]";
     }
+    
 }

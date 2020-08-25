@@ -1,5 +1,6 @@
 plugins {
 	id 'java'
+	id 'application'
 }
 
 group = 'com.example'
@@ -15,3 +16,4 @@ dependencies {
 
 }
 
+mainClassName = 'com.example.abstraction.base_code.Main' 

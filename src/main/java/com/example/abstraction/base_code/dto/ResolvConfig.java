@@ -1,4 +1,4 @@
-package com.example.jackson.base_code.dto;
+package com.example.abstraction.base_code.dto;
 
 public class ResolvConfig {
     private String nameserver;

@@ -1,7 +1,7 @@
-package com.example.jackson.base_code;
+package com.example.abstraction.base_code;
 
-import com.example.jackson.base_code.config.ConfigManager;
-import com.example.jackson.base_code.dto.MySqlConfig;
+import com.example.abstraction.base_code.config.ConfigManager;
+import com.example.abstraction.base_code.dto.MySqlConfig;
 
 public class InventoryHardware {
     public static void storeMySqlConfig(MySqlConfig mySqlConfig) {
